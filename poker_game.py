@@ -54,20 +54,21 @@ def winner(number_of_players):
                 if card != max(large_ls):
                     pla.pop(player)
             return("The winner is {}!".format((list(pla.keys())[0])))
+            
         elif large_ls.count(max(large_ls)) > 1: 
             for player, card in large.items():
                 if card != max(large_ls):
                     pla.pop(player)
                     
-def NUMBER_OF_PLAYERS():
-    number_of_players = input("What's the number of players: ")
-    win = winner(number_of_players)
-    return(win)
+
+number_of_players = input("What's the number of players: ")
+win = winner(number_of_players)
+print(win)
+   
+#if __name__ == '__main__':
+    #globals()[sys.argv[1]]()
     
-if __name__ == '__main__':
-    globals()[sys.argv[1]]()
-    
-#    NUMBER_OF_PLAYERS()
+ #   NUMBER_OF_PLAYERS()
 #    globals()[sys.argv[1]]()
                     
 #    class Cards():
